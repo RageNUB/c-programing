@@ -1,0 +1,2 @@
+< input.txt > output.txt || (echo -n > output.txt && echo 'Time Limit Gone')
+timeout 5s
