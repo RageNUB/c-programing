@@ -1,1 +1,44 @@
-Write a C++ program that takes N integer numbers that are sorted and distinct. The next line will contain an integer k. You need to tell whether K exists in that array or not. If it exists, print its index otherwise print “Not Found”. 
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    int ar[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> ar[i];
+    }
+    int x;
+    cin >> x;
+
+
+    int l = 0, r = n - 1, mid;
+    bool flag = false;
+    while (l <= r)
+    {
+        mid = (l + r) / 2;
+        if (ar[mid] == x)
+        {
+            flag = true;
+            break;
+        }
+        else if (ar[mid] < x)
+        {
+            l = mid + 1;
+        }
+        else
+        {
+            r = mid - 1;
+        }
+    }
+
+
+    if (flag)
+        cout << mid;
+    else
+        cout << "Not Found";
+
+
+    return 0;
+}
