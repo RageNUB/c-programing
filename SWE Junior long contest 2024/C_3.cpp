@@ -2,18 +2,27 @@
 using namespace std;
 int main()
 {
-    long long s , p;
+    long long s , p, n, m;
     cin>>s>>p;
     bool flag = false;
-    for (int i = 1; i <= s; i++)
+    n = sqrt(s);
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= s; j++)
+        m = s - i;
+        // n = s / i;
+        for (int j = 1; j <= m; j++)
         {
-            if(i*j == p && i+j == s)
+            if(j*m == p && j+m == s) 
             {
+                // cout<<"found"<<endl;
                 flag = true;
                 break;
             }
+            // if(i*j == p && i+j == s)
+            // {
+            //     flag = true;
+            //     break;
+            // }
         }
     }
     if(flag) cout<<"Yes"<<endl;

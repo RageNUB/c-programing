@@ -2,6 +2,7 @@
   "files.associations": {
     "*.svg": "javascript",
     "iomanip": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
