@@ -3,6 +3,12 @@
     "*.svg": "javascript",
     "iomanip": "cpp",
     "iostream": "cpp",
-    "ostream": "cpp"
-  }
+    "ostream": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "vector": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }

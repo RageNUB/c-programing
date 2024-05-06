@@ -1,32 +1,24 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
+const int N = 1e8 + 9;
 int main()
 {
-    long long s , p, n, m;
-    cin>>s>>p;
+    long long s, p, n, m;
+    cin >> s >> p;
     bool flag = false;
-    n = sqrt(s);
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= N; i++)
     {
-        m = s - i;
-        // n = s / i;
-        for (int j = 1; j <= m; j++)
+        m = p / i;
+        if (i + m == s)
         {
-            if(j*m == p && j+m == s) 
-            {
-                // cout<<"found"<<endl;
-                flag = true;
-                break;
-            }
-            // if(i*j == p && i+j == s)
-            // {
-            //     flag = true;
-            //     break;
-            // }
+            flag = true;
+            break;
         }
     }
-    if(flag) cout<<"Yes"<<endl;
-    else cout<<"No"<<endl;
-    
+    if (flag)
+        cout << "Yes" << endl;
+    else
+        cout << "No" << endl;
+
     return 0;
 }
